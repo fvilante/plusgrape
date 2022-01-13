@@ -3,6 +3,7 @@
   import Counter from './lib/Counter.svelte'
   import Logo from './lib/Logo.svelte'
   import Titulo from './lib/Titulo.svelte'
+  import MakeHash from './lib/MakeHash.svelte'
 
   const ipAddress = `192.168.15.80`
   const port = `8080`
@@ -21,6 +22,9 @@
   <a href="{httpAddress}"> controle </a>
   <br>
   <p class='ip'> {httpAddress} </p>
+
+  <br>
+  <MakeHash/>
 
 </main>
 
