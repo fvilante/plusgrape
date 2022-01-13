@@ -1,30 +1,36 @@
 <script lang="ts">
-  import logo from './assets/svelte.png'
+  import logo from './assets/julia-labs-logo.png'
   import Counter from './lib/Counter.svelte'
+  import Logo from './lib/Logo.svelte'
+  import Titulo from './lib/Titulo.svelte'
 </script>
 
 <main>
-  <img src={logo} alt="Svelte Logo" />
-  <h1>Hello Engenharia Avançada!!</h1>
-  <h2>Fala Galdinão!!</h2>
 
-  <Counter />
+  <div class='upperbar'>
+    <Logo/>
+    <Titulo/>
+  </div>
 
-  <p>
-    Visit <a href="https://svelte.dev">svelte.dev</a> to learn how to build Svelte
-    apps.
-  </p>
+  <p>clique em </p>
+  <a href="http://192.168.15.80:8080/"> controle </a>
+  <p>a qualquer momento para prosseguir</p>
 
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme">SvelteKit</a> for
-    the officially supported framework, also powered by Vite!
-  </p>
 </main>
 
 <style>
   :root {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
       Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  div.upperbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    border: 1px solid black
   }
 
   main {
@@ -34,22 +40,13 @@
   }
 
   img {
-    height: 16rem;
-    width: 16rem;
+    height: 160rem;
+    width: 160rem;
   }
 
-  h1 {
-    color: #ff3e00;
-    text-transform: uppercase;
-    font-size: 4rem;
-    font-weight: 100;
-    line-height: 1.1;
-    margin: 2rem auto;
-    max-width: 14rem;
-  }
-
+  
   p {
-    max-width: 14rem;
+    max-width: 54rem;
     margin: 1rem auto;
     line-height: 1.35;
   }
