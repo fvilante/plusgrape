@@ -3,6 +3,11 @@
   import Counter from './lib/Counter.svelte'
   import Logo from './lib/Logo.svelte'
   import Titulo from './lib/Titulo.svelte'
+
+  const ipAddress = `192.168.15.80`
+  const port = `8080`
+  const httpAddress= `http://${ipAddress}:${port}`
+
 </script>
 
 <main>
@@ -12,9 +17,10 @@
     <Titulo/>
   </div>
 
-  <p>clique em </p>
-  <a href="http://192.168.15.80:8080/"> controle </a>
-  <p>a qualquer momento para prosseguir</p>
+  <p>clique em `controle` abaixo, a qualquer momento para proseguir</p>
+  <a href="{httpAddress}"> controle </a>
+  <br>
+  <p class='ip'> {httpAddress} </p>
 
 </main>
 
@@ -44,11 +50,33 @@
     width: 160rem;
   }
 
+  a {
+    display: inline-block;
+    width: 100px;
+    background-color: beige;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  a:hover {
+    display: inline-block;
+    width: 100px;
+    background-color: beige;
+    border: 5px solid red;
+    padding: 10px;
+    margin: 10px;
+  }
   
   p {
     max-width: 54rem;
     margin: 1rem auto;
     line-height: 1.35;
+  }
+
+  p.ip {
+    font-size: small;
+    font-style: italic;
   }
 
   @media (min-width: 480px) {
