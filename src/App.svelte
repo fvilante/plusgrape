@@ -7,7 +7,14 @@
 
   const ipAddress = `192.168.15.80`
   const port = `8080`
-  const httpAddress= `http://${ipAddress}:${port}`
+  let httpAddress= `http://${ipAddress}:${port}`
+  let showEditBox = false
+
+  const toggle = () => {
+    showEditBox = showEditBox ? false : true
+  }
+
+
 
 </script>
 
@@ -21,8 +28,13 @@
   <p>clique em `controle` abaixo, a qualquer momento para proseguir</p>
   <a href="{httpAddress}"> controle </a>
   <br>
-  <p class='ip'> {httpAddress} </p>
 
+  {#if showEditBox}
+    <input on:change={toggle} bind:value={httpAddress}>
+  {:else}
+    <p on:click="{toggle}">{httpAddress}</p>
+  {/if}
+  
   <br>
   <MakeHash/>
 

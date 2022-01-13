@@ -30,9 +30,10 @@
 
 
 <div class='container'>
+    <p>Click no botao abaixo para converter o texto "{seed}" em um codigo numerico</p>
     <input bind:value={seed}>
     <button on:click="{onclick}"> {button_text} </button>
-    <p>Convertendo o texto '{seed}' para um codigo</p>
-    resultado; <p class='result'>[{result}]</p>
+   
+    <p>resultado: </p> <p class='result'>[{result}]</p>
 
 </div>
