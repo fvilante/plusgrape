@@ -25,25 +25,33 @@
     <Titulo/>
   </div>
 
-  <p>clique em `controle` abaixo, a qualquer momento para proseguir</p>
+  <p>clique no link abaixo para iniciar</p>
   <a href="{httpAddress}"> controle </a>
   <br>
 
   {#if showEditBox}
-    <input on:change={toggle} bind:value={httpAddress}>
+  <input on:change={toggle} bind:value={httpAddress}>
   {:else}
     <p on:click="{toggle}">{httpAddress}</p>
-  {/if}
+  {/if}  
+
   
   <br>
+  <div class='non-visible'>
+  
   <MakeHash/>
-
+  </div>
+  
 </main>
 
 <style>
   :root {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
       Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  div.non-visible {
+    display: none
   }
 
   div.upperbar {
