@@ -6,6 +6,7 @@
   import MakeHash from './lib/MakeHash.svelte'
 
   const ipAddress = `192.168.15.80`
+  const blogAddress = `http://3.91.59.138`
   const port = `8080`
   let httpAddress= `http://${ipAddress}:${port}`
   let showEditBox = false
@@ -25,22 +26,34 @@
     <Titulo/>
   </div>
 
-  <p>clique no link abaixo para iniciar</p>
-  <a href="{httpAddress}"> controle </a>
+  <br>
+    <p>Ir para <a href="{blogAddress}">artigos</a></p>
+
   <br>
 
-  {#if showEditBox}
-  <input on:change={toggle} bind:value={httpAddress}>
-  {:else}
-    <p on:click="{toggle}">{httpAddress}</p>
-  {/if}  
 
-  
-  <br>
+
   <div class='non-visible'>
+
+    <p>clique no link abaixo para iniciar</p>
+    <a href="{httpAddress}"> controle </a>
+    <br>
+
+    {#if showEditBox}
+    <input on:change={toggle} bind:value={httpAddress}>
+    {:else}
+      <p on:click="{toggle}">{httpAddress}</p>
+    {/if}  
   
-  <MakeHash/>
+    
+    <br>
+    <div class='non-visible'>
+    
+    <MakeHash/>
+    </div>
   </div>
+
+  
   
 </main>
 

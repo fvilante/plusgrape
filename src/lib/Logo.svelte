@@ -34,6 +34,6 @@
 </style>
 
 <div class='logo-container'>
-    <h1 id='Julia'>Content</h1>
+    <h1 id='Julia'>Julia</h1>
     <h1 id='Labs'>Labs</h1>    
 </div>
